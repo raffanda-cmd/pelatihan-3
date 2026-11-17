@@ -1,0 +1,201 @@
+/* Reset & Pengaturan Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0d1117; 
+    color: #c9d1d9;            
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Layout Utama CV (Grid / Flex Dua Kolom) */
+.cv-container {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    background-color: #161b22;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border: 1px solid #30363d;
+}
+
+/* Sidebar Kiri */
+.cv-sidebar {
+    width: 32%;
+    background-color: #21262d;
+    padding: 30px 20px;
+    border-right: 1px solid #30363d;
+}
+
+.profile-img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.profile-img-container img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #58a6ff;
+}
+
+.cv-sidebar h3 {
+    font-size: 16px;
+    color: #58a6ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 6px;
+}
+
+.contact-section, .skills-section {
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.contact-section p {
+    margin-bottom: 10px;
+    word-break: break-all;
+}
+
+/* Badges Keahlian */
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.badge {
+    background-color: #30363d;
+    color: #58a6ff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Konten Utama Kanan */
+.cv-main {
+    flex: 1;
+    padding: 40px;
+}
+
+.cv-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 15px;
+}
+
+.cv-header h1 {
+    font-size: 28px;
+    color: #f0f6fc;
+    font-weight: 700;
+}
+
+.job-title {
+    font-size: 16px;
+    color: #58a6ff;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.cv-section {
+    margin-bottom: 25px;
+}
+
+.cv-section h2 {
+    font-size: 18px;
+    color: #f0f6fc;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-left: 4px solid #58a6ff;
+    padding-left: 10px;
+}
+
+.cv-section p {
+    font-size: 14px;
+    color: #8b949e;
+}
+
+/* Item Pengalaman & Pendidikan */
+.experience-item, .education-item {
+    margin-bottom: 15px;
+}
+
+.exp-title-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.experience-item h3, .education-item h3 {
+    font-size: 15px;
+    color: #c9d1d9;
+    font-weight: 600;
+}
+
+.company {
+    font-size: 14px;
+    color: #58a6ff;
+    font-weight: 500;
+}
+
+.year {
+    font-size: 13px;
+    color: #8b949e;
+    background-color: #21262d;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.experience-item ul {
+    margin-left: 18px;
+    font-size: 14px;
+    color: #8b949e;
+}
+
+.experience-item li {
+    margin-bottom: 4px;
+}
+
+/* Responsif untuk Layar HP / Mobile */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .cv-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #30363d;
+        text-align: center;
+    }
+
+    .skills-section {
+        align-items: center;
+    }
+
+    .exp-title-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .year {
+        margin-top: 4px;
+    }
+}
